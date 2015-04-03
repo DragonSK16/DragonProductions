@@ -7,8 +7,13 @@ local db = {}
 
 db["Kill"] = function(Player, msg)
   local P2;
+  local b, msg = pcall(function()
+  			local Name = (msg):match("%w+$");
+        P2 = game.Players:FindFirstChild(Name)
+        end)
   if b then
-    P2 = (msg):match("%w+$");
+    local Name = (msg):match("%w+$");
+    P2 = game.Players:FindFirstChild(Name)
   end
   if P2 ~= nil then
     if P2.Character then
