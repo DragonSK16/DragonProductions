@@ -14,4 +14,5 @@ function PlayerRemoved(Player)
   -- Code
 end
 
-game.PlayersAdded:connect(PlayerAdded)
+game.Players.PlayerAdded:connect(PlayerAdded)
+game.Players.PlayerRemoved:connect(PlayerRemoved)
